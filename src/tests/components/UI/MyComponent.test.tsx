@@ -35,8 +35,10 @@ describe("testing in <MyComponent/>", () => {
 
   it("Should exist a label", () => {
     renderMyComponent();
-    expect(screen.getByLabelText('soyInput')).toBeInTheDocument()
+    //bad way
     expect(!!screen.getByLabelText("soyInput")).toBe(true)
+    // correct way
+    expect(screen.getByLabelText('soyInput')).toBeInTheDocument()
   });
 
   it("Should be disable", () => {
@@ -53,20 +55,15 @@ describe("testing in <MyComponent/>", () => {
   })
 
 
-  it("Should exist a input", () => {
-    renderMyComponent();
-   const input =  document.getElementById('inputTextTest');
-   //bad way
-   expect(!!input).toBe(true)
-  })
+ 
 
-  it("Should exist a inp", () => {
+  it("Should exist a input", () => {
     renderMyComponent();
    const input =  document.getElementById('inputTextTest');
    const {label} = initialProps
    //bad way
    expect(!!input).toBe(true)
-   //good way
+   //correct way 
   expect(screen.getByLabelText(label)).toBeInTheDocument()
 
   })
