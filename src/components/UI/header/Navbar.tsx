@@ -1,11 +1,11 @@
-import { FC, memo, useState } from "react";
+import { FC, memo, useState, ChangeEvent } from "react";
 import { Link, NavLink } from "react-router-dom";
 import MyComponent from "../MyComponent/MyComponent";
 
 import * as style from "./styles";
 const Navbar: FC = () => {
   const [state, setState] =  useState('')
-  const handleChange = (e:any) => {
+  const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
     setState(e.target.value)
   }
   return (   

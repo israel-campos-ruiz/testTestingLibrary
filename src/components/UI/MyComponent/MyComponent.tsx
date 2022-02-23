@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC, ChangeEvent } from 'react';
 interface Props {
     label:string,
-    onchange:(e:any) => void,
+    onchange:(e:ChangeEvent<HTMLInputElement>) => void,
     defaultValue:string,
     isDisable:boolean,
 }
