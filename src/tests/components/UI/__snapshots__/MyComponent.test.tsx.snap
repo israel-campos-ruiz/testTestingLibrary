@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing in <MyComponent/> Should match with snapshoot 1`] = `
+<DocumentFragment>
+  <label
+    aria-label="soyInput"
+    for="name"
+  >
+    soyInput
+  </label>
+  <input
+    id="inputTextTest"
+    name="name"
+    type="text"
+    value=""
+  />
+</DocumentFragment>
+`;
