@@ -68,7 +68,7 @@ describe('testing in <MyComponent/>', () => {
     expect(input).toHaveValue(write);
   });
 
-  it('should onChange called', () => {
+  it('should handle onChange event properly', () => {
     const mockfn = jest.fn();
     renderMyComponent({ ...initialProps, onChange: mockfn });
     let { defaultValue, onChange } = initialProps;
