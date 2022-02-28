@@ -16,6 +16,7 @@ describe('testing in <MyComponent/>', () => {
     defaultValue: '',
     isDisable: false,
   };
+  const write = 'typing';
   const renderMyComponent = (props = initialProps) =>
     render(
       <BrowserRouter>
@@ -63,7 +64,6 @@ describe('testing in <MyComponent/>', () => {
     renderMyComponent();
     const { defaultValue } = initialProps;
     const input = screen.getByDisplayValue(defaultValue);
-    const write = 'typing';
     userEvent.type(input, write);
     expect(input).toHaveValue(write);
   });
@@ -74,7 +74,6 @@ describe('testing in <MyComponent/>', () => {
     let { defaultValue, onChange } = initialProps;
     onChange = mockfn;
     const input = screen.getByDisplayValue(defaultValue);
-    const write = 'typing';
     userEvent.type(input, write);
     expect(onChange).toHaveBeenCalled();
   });
