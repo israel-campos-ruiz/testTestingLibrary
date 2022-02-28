@@ -69,10 +69,9 @@ describe('testing in <MyComponent/>', () => {
   });
 
   it('should handle onChange event properly', () => {
-    const mockfn = jest.fn();
-    renderMyComponent({ ...initialProps, onChange: mockfn });
-    let { defaultValue, onChange } = initialProps;
-    onChange = mockfn;
+    const onChange = jest.fn();
+    renderMyComponent({ ...initialProps, onChange });
+    let { defaultValue, } = initialProps;  
     const input = screen.getByDisplayValue(defaultValue);
     userEvent.type(input, write);
     expect(onChange).toHaveBeenCalled();
