@@ -1,12 +1,12 @@
-import { FC, ChangeEvent } from 'react';
+import { FC, } from 'react';
 interface Props {
     label:string,
-    onchange:(e:ChangeEvent<HTMLInputElement>) => void,
     defaultValue:string,
     isDisable:boolean,
+    onChange?:any
 }
 
-const MyComponent:FC<Props> = ({label,onchange, defaultValue, isDisable}) => {
+const MyComponent:FC<Props> = ({label,onChange, defaultValue, isDisable}) => {
 
   return (
     <>
@@ -14,7 +14,7 @@ const MyComponent:FC<Props> = ({label,onchange, defaultValue, isDisable}) => {
        {label}
       </label>
       <input
-        onChange={onchange}
+        onChange={onChange}
         id="inputTextTest"
         type="text"
         name="name"

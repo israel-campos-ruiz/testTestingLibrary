@@ -96,7 +96,7 @@ const Navbar: FC = () => {
           </ul>
         </div>
       </div>
-      <MyComponent label='imLabel' onchange={handleChange} isDisable={false} defaultValue={state} />
+      <MyComponent label='imLabel' onChange={handleChange} isDisable={false} defaultValue={state} />
     </nav>
   );
 };

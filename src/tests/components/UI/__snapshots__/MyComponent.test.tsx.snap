@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing in <MyComponent/> Should match with snapshoot 1`] = `
+exports[`testing in <MyComponent/> should match with snapshoot 1`] = `
 <DocumentFragment>
   <label
     aria-label="soyInput"

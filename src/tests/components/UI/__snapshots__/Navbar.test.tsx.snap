@@ -107,16 +107,16 @@ exports[`testing in <Navbar/> Should match with snapshoot 1`] = `
       </div>
     </div>
     <label
-      aria-label="soyInput"
+      aria-label="imLabel"
       for="name"
     >
-      soyInput
+      imLabel
     </label>
     <input
       id="inputTextTest"
       name="name"
       type="text"
-      value="im"
+      value=""
     />
   </nav>
 </DocumentFragment>
