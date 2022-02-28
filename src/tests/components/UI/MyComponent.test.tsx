@@ -71,7 +71,7 @@ describe('testing in <MyComponent/>', () => {
   it('should handle onChange event properly', () => {
     const handeOnChange = jest.fn();
     renderMyComponent({ ...initialProps, onChange:handeOnChange });
-    let { defaultValue } = initialProps;  
+    const { defaultValue } = initialProps;  
     const input = screen.getByDisplayValue(defaultValue);
     const write = 'typing';
     userEvent.type(input, write);
