@@ -16,7 +16,6 @@ describe('testing in <MyComponent/>', () => {
     defaultValue: '',
     isDisable: false,
   };
-  const write = 'typing';
   const renderMyComponent = (props = initialProps) =>
     render(
       <BrowserRouter>
@@ -54,7 +53,7 @@ describe('testing in <MyComponent/>', () => {
     expect(view).not.toBeDisabled();
   });
 
-  it('should render a input', () => {
+  it('should render an input', () => {
     renderMyComponent();
     const { label } = initialProps;
     expect(screen.getByLabelText(label)).toBeInTheDocument();
@@ -64,16 +63,18 @@ describe('testing in <MyComponent/>', () => {
     renderMyComponent();
     const { defaultValue } = initialProps;
     const input = screen.getByDisplayValue(defaultValue);
+    const write = 'typing';
     userEvent.type(input, write);
     expect(input).toHaveValue(write);
   });
 
   it('should handle onChange event properly', () => {
-    const onChange = jest.fn();
-    renderMyComponent({ ...initialProps, onChange });
-    let { defaultValue, } = initialProps;  
+    const handeOnChange = jest.fn();
+    renderMyComponent({ ...initialProps, onChange:handeOnChange });
+    let { defaultValue } = initialProps;  
     const input = screen.getByDisplayValue(defaultValue);
+    const write = 'typing';
     userEvent.type(input, write);
-    expect(onChange).toHaveBeenCalled();
+    expect(handeOnChange).toHaveBeenCalled();
   });
 });
