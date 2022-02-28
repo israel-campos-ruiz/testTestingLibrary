@@ -69,12 +69,12 @@ describe('testing in <MyComponent/>', () => {
   });
 
   it('should handle onChange event properly', () => {
-    const handeOnChange = jest.fn();
-    renderMyComponent({ ...initialProps, onChange:handeOnChange });
+    const handleOnChange = jest.fn();
+    renderMyComponent({ ...initialProps, onChange:handleOnChange });
     const { defaultValue } = initialProps;  
     const input = screen.getByDisplayValue(defaultValue);
     const write = 'typing';
     userEvent.type(input, write);
-    expect(handeOnChange).toHaveBeenCalled();
+    expect(handleOnChange).toHaveBeenCalled();
   });
 });
